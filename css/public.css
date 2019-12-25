@@ -1,6 +1,11 @@
 @charset "UTF-8";
 *, *:after, *:before { vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: subpixel-antialiased; -moz-font-smoothing: subpixel-antialiased; -ms-font-smoothing: subpixel-antialiased; -o-font-smoothing: subpixel-antialiased; }
 
-body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #5a5a5a; font-size: medium; text-align: center; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; }
-body::-moz-selection { color: white; background-color: #78baff; }
-body::selection { color: white; background-color: #78baff; }
+body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #5a5a5a; font-size: medium; text-align: center; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; background-color: #003d56; }
+
+.top { display: inline-block; width: 100%; position: relative; }
+.top .menuboxs { display: inline-block; width: 100%; max-width: 990px; *zoom: 1; height: 100px; border: 1px solid rgba(255, 0, 0, 0.3); }
+.top .menuboxs:after { display: table; content: ""; line-height: 0; clear: both; }
+.top .menuboxs div { display: inline-block; width: calc(100% / 6); float: left; }
+.top .Ll { direction: inline-block; position: absolute; top: 0; left: 0; }
+.top .Rl { direction: inline-block; position: absolute; top: 0; right: 0; }

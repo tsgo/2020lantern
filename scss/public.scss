@@ -20,7 +20,61 @@ body {
   font-size: medium;
   text-align: center;
   font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+
+  background-color: rgba(0, 61, 86, 1.00);
   
   // 文字染色，背景色、文字色
-  @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
+  // @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
 }
+
+
+
+.top {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+
+  .menuboxs {
+    display: inline-block;
+    width: 100%;
+    max-width: 990px;
+    @include clearfix();
+    
+    // d
+    height: 100px;
+    border: 1px solid rgba(255, 0, 0, .3);
+
+    div {
+      display: inline-block;
+      width: calc(100% / 6);
+      float: left;
+
+      a {
+        
+      }
+    }
+  }
+
+  .Ll {
+    direction: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .Rl {
+    direction: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
