@@ -3,9 +3,22 @@
 
 body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #5a5a5a; font-size: medium; text-align: center; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; background-color: #003d56; }
 
-.top { display: inline-block; width: 100%; position: relative; }
-.top .menuboxs { display: inline-block; width: 100%; max-width: 990px; *zoom: 1; height: 100px; border: 1px solid rgba(255, 0, 0, 0.3); }
+.top { display: inline-block; width: 100%; *zoom: 1; position: fixed; top: 0; left: 0; z-index: 99; }
+.top:after { display: table; content: ""; line-height: 0; clear: both; }
+.top .menuboxs { display: inline-block; width: calc(100% - 336px - 242px); *zoom: 1; padding-top: 30px; margin-left: -30px; }
 .top .menuboxs:after { display: table; content: ""; line-height: 0; clear: both; }
 .top .menuboxs div { display: inline-block; width: calc(100% / 6); float: left; }
-.top .Ll { direction: inline-block; position: absolute; top: 0; left: 0; }
-.top .Rl { direction: inline-block; position: absolute; top: 0; right: 0; }
+.top .menuboxs div a { display: inline-block; widows: 100%; font-size: 1.1rem; color: white; text-decoration: none; line-height: 63px; background-image: none; -moz-transition: all, 0.3s; -o-transition: all, 0.3s; -webkit-transition: all, 0.3s; transition: all, 0.3s; }
+.top .menuboxs div a:hover { cursor: pointer; background-image: url(../img/menu_bg.png); background-repeat: no-repeat; display: inline-block; height: 63px; width: 144px; }
+.top .Ll, .top .Rl { direction: inline-block; width: 100%; }
+.top .Ll { max-width: 336px; float: left; }
+.top .Rl { max-width: 242px; float: right; }
+
+.cent { display: inline-block; width: 100%; position: absolute; top: 10px; left: 0; z-index: 88; *zoom: 1; }
+.cent:after { display: table; content: ""; line-height: 0; clear: both; }
+.cent .C_boxs { display: inline-block; width: calc(100% - 249px - 838px); position: relative; }
+.cent .C_boxs .title_boxs { display: inline-block; width: 100%; position: absolute; top: 255px; left: -140px; }
+.cent .C_boxs .title_boxs img { width: 100%; max-width: 600px; }
+.cent .CL, .cent .CR { display: inline-block; width: 100%; }
+.cent .CL { max-width: 249px; float: left; }
+.cent .CR { max-width: 838px; float: right; }
