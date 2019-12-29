@@ -99,39 +99,32 @@ body {
   @include clearfix();
 
 
-  .C_boxs {
-    display: inline-block;
-    width: calc(100% - 249px - 838px);
-    position: relative;
-
-    .title_boxs {
-      display: inline-block;
-      width: 100%;
-      position: absolute;
-      top: 255px;
-      left: -140px;
-
-      img {
-        width: 100%;
-        max-width: 600px;
-      }
-    }
-  }
-
   .CL, .CR {
     display: inline-block;
-    width: 100%;
   }
 
   .CL {
-    max-width: 249px;
+    width: 20%;
     float: left;
-  }
-  .CR {
-    max-width: 838px;
-    float: right;
+    @include clearfix();
+    
+    .CLi {
+      display: inline-block;
+      width: 100%;
+      max-width: 249px;
+      float: left;
+    }
   }
 
+  .CR {
+    width: 80%;
+    float: right;
+    .CRi {
+      display: inline-block;
+      width: 100%;
+      max-width: 1250px;
+    }
+  }
 
 }
 

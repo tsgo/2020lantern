@@ -16,9 +16,9 @@ body { position: relative; display: inline-block; width: 100%; margin: 0; paddin
 
 .cent { display: inline-block; width: 100%; position: absolute; top: 10px; left: 0; z-index: 88; *zoom: 1; }
 .cent:after { display: table; content: ""; line-height: 0; clear: both; }
-.cent .C_boxs { display: inline-block; width: calc(100% - 249px - 838px); position: relative; }
-.cent .C_boxs .title_boxs { display: inline-block; width: 100%; position: absolute; top: 255px; left: -140px; }
-.cent .C_boxs .title_boxs img { width: 100%; max-width: 600px; }
-.cent .CL, .cent .CR { display: inline-block; width: 100%; }
-.cent .CL { max-width: 249px; float: left; }
-.cent .CR { max-width: 838px; float: right; }
+.cent .CL, .cent .CR { display: inline-block; }
+.cent .CL { width: 20%; float: left; *zoom: 1; }
+.cent .CL:after { display: table; content: ""; line-height: 0; clear: both; }
+.cent .CL .CLi { display: inline-block; width: 100%; max-width: 249px; float: left; }
+.cent .CR { width: 80%; float: right; }
+.cent .CR .CRi { display: inline-block; width: 100%; max-width: 1250px; }
