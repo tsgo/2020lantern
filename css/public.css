@@ -43,7 +43,7 @@ body { position: relative; display: inline-block; width: 100%; margin: 0; paddin
 .p_top .pt_C { display: inline-block; width: calc(100% - 200px - 200px); float: left; *zoom: 1; }
 .p_top .pt_C:after { display: table; content: ""; line-height: 0; clear: both; }
 .p_top .pt_C .pt_icon_boxs { display: inline-block; float: right; }
-.p_top .pt_C .pt_icon_boxs a { display: inline-block; content: ''; widows: 100%; font-size: 1.1rem; line-height: 70px; color: white; text-decoration: none; }
+.p_top .pt_C .pt_icon_boxs a { display: inline-block; widows: 100%; font-size: 1.1rem; line-height: 70px; color: white; text-decoration: none; }
 .p_top .pt_C .pt_menu_boxs { display: inline-block; width: 100%; }
 .p_top .pt_C .pt_menu_boxs .pt_menu { display: inline-block; width: calc(90% / 6); }
 .p_top .pt_C .pt_menu_boxs .pt_menu a { display: inline-block; widows: 100%; font-size: 1rem; color: white; text-decoration: none; line-height: 44px; background-image: none; -moz-transition: all, 0.3s; -o-transition: all, 0.3s; -webkit-transition: all, 0.3s; transition: all, 0.3s; }

@@ -1,4 +1,4 @@
-@font-face { font-family: "icon"; src: url('../font/icomoon/fonts/icomoon.eot?1577677822') format('embedded-opentype'), url('../font/icomoon/fonts/icomoon.woff?1577677822') format('woff'), url('../font/icomoon/fonts/icomoon.ttf?1577677822') format('truetype'), url('../font/icomoon/fonts/icomoon.svg?1577677822') format('svg'); }
+@font-face { font-family: "icon"; src: url('../font/icomoon/fonts/icomoon.eot?1577712713') format('embedded-opentype'), url('../font/icomoon/fonts/icomoon.woff?1577712713') format('woff'), url('../font/icomoon/fonts/icomoon.ttf?1577712713') format('truetype'), url('../font/icomoon/fonts/icomoon.svg?1577712713') format('svg'); }
 *[class^="icon-"]:before, *[class*=" icon-"]:before { font-family: "icon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; }
 
 .icon-instagram:before { content: "\e912"; }
