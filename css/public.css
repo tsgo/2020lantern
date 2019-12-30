@@ -1,7 +1,7 @@
 @charset "UTF-8";
 *, *:after, *:before { vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: subpixel-antialiased; -moz-font-smoothing: subpixel-antialiased; -ms-font-smoothing: subpixel-antialiased; -o-font-smoothing: subpixel-antialiased; }
 
-body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #5a5a5a; font-size: medium; text-align: center; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; background-color: #003d56; }
+body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #5a5a5a; font-size: 12px; text-align: center; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; background-color: #003d56; }
 
 .top { display: inline-block; width: 100%; *zoom: 1; position: fixed; top: 0; left: 0; z-index: 99; }
 .top:after { display: table; content: ""; line-height: 0; clear: both; }
@@ -22,3 +22,35 @@ body { position: relative; display: inline-block; width: 100%; margin: 0; paddin
 .cent .CL .CLi { display: inline-block; width: 100%; max-width: 249px; float: left; }
 .cent .CR { width: 80%; float: right; }
 .cent .CR .CRi { display: inline-block; width: 100%; max-width: 1250px; }
+
+.footer { display: inline-block; width: 100%; position: fixed; bottom: 0; left: 0; background-image: url(../img/f_bg.png); background-repeat: repeat-x; background-position: left bottom; *zoom: 1; }
+.footer:after { display: table; content: ""; line-height: 0; clear: both; }
+.footer .fboxs { display: inline-block; width: calc(100% - 166px - 233px - 40px); margin: 0 10px 0 30px; }
+.footer .fboxs .f_types { display: inline-block; width: 100%; *zoom: 1; text-align: left; padding-top: 10px; }
+.footer .fboxs .f_types:after { display: table; content: ""; line-height: 0; clear: both; }
+.footer .fboxs .f_types .f_tl, .footer .fboxs .f_types .f_tr { display: inline-block; padding: 0; margin: 0; color: white; font-size: .9rem; float: left; }
+.footer .fboxs .f_types .f_tl { width: 10%; font-weight: 600; }
+.footer .fboxs .f_types .f_tr { width: 90%; }
+.footer .fL, .footer .fR { direction: inline-block; width: 100%; }
+.footer .fL { max-width: 166px; float: left; }
+.footer .fR { max-width: 233px; float: right; }
+
+.p_top { display: inline-block; width: 100%; *zoom: 1; padding: 10px 0 20px 10px; }
+.p_top:after { display: table; content: ""; line-height: 0; clear: both; }
+.p_top .pt_L { display: inline-block; width: 100%; max-width: 200px; float: left; }
+.p_top .pt_L a { display: inline-block; width: 100%; cursor: pointer; outline: 0; }
+.p_top .pt_L a img { display: inline-block; width: 100%; max-width: 200px; }
+.p_top .pt_C { display: inline-block; width: calc(100% - 200px - 200px); float: left; *zoom: 1; }
+.p_top .pt_C:after { display: table; content: ""; line-height: 0; clear: both; }
+.p_top .pt_C .pt_icon_boxs { display: inline-block; float: right; }
+.p_top .pt_C .pt_icon_boxs a { display: inline-block; content: ''; widows: 100%; font-size: 1.1rem; line-height: 70px; color: white; text-decoration: none; }
+.p_top .pt_C .pt_menu_boxs { display: inline-block; width: 100%; }
+.p_top .pt_C .pt_menu_boxs .pt_menu { display: inline-block; width: calc(90% / 6); }
+.p_top .pt_C .pt_menu_boxs .pt_menu a { display: inline-block; widows: 100%; font-size: 1rem; color: white; text-decoration: none; line-height: 44px; background-image: none; -moz-transition: all, 0.3s; -o-transition: all, 0.3s; -webkit-transition: all, 0.3s; transition: all, 0.3s; }
+.p_top .pt_C .pt_menu_boxs .pt_menu a:hover { cursor: pointer; background-image: url(../img/menu_bg.png); background-repeat: no-repeat; display: inline-block; height: 44px; width: 100px; }
+.p_top .pt_R { display: inline-block; width: 100%; max-width: 200px; float: right; *zoom: 1; }
+.p_top .pt_R:after { display: table; content: ""; line-height: 0; clear: both; }
+.p_top .pt_R img { display: inline-block; width: 100%; max-width: 200px; float: right; }
+
+.p_cent { display: inline-block; width: 100%; background-image: url(../img/Group2.png); background-repeat: no-repeat; background-size: cover; margin-bottom: 30px; }
+.p_cent .pc_boxs { display: inline-block; width: 100%; max-width: 990px; min-height: 800px; background-color: #f8f2de; }
