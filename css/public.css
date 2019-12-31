@@ -1,7 +1,7 @@
 @charset "UTF-8";
 *, *:after, *:before { vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: subpixel-antialiased; -moz-font-smoothing: subpixel-antialiased; -ms-font-smoothing: subpixel-antialiased; -o-font-smoothing: subpixel-antialiased; }
 
-body { position: relative; display: inline-block; width: 100%; height: 100vh; margin: 0; padding: 0; color: #5a5a5a; font-size: 12px; text-align: center; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; background-color: #004059; }
+body { position: relative; display: inline-block; width: 100%; height: 100%; margin: 0; padding: 0; color: #5a5a5a; font-size: 12px; text-align: center; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; background-color: #004059; }
 
 .it_l, .it_r, .if_l, .if_r { display: inline-block; position: absolute; }
 
@@ -66,7 +66,17 @@ body { position: relative; display: inline-block; width: 100%; height: 100vh; ma
 .i_cent_boxs .in_mouse_m { display: none; }
 @media screen and (max-width: 449px) and (min-width: 0) { .i_cent_boxs .in_mouse_m { display: inline-block; width: 100%; max-width: 450px; padding-bottom: 20px; } }
 
+.cent_boxs { display: inline-block; width: 100%; background-image: url(../img/page_bg.png); background-repeat: no-repeat; background-size: 90%; background-position: center center; margin: 30px 0; }
+@media screen and (max-width: 1989px) and (min-width: 1350px) { .cent_boxs { background-size: 80%; } }
+@media screen and (max-width: 1349px) and (min-width: 890px) { .cent_boxs { background-size: 90%; } }
+@media screen and (max-width: 889px) and (min-width: 0) { .cent_boxs { margin: 0; background-size: cover; } }
+.cent_boxs .cent_box { display: inline-block; width: 100%; max-width: calc(880px - 40px); min-height: 800px; background-color: #f8f2de; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; margin: 0 20px; padding: 20px; }
+@media screen and (max-width: 1989px) and (min-width: 1350px) { .cent_boxs .cent_box { max-width: calc(1000px - 40px); } }
+@media screen and (max-width: 1349px) and (min-width: 890px) { .cent_boxs .cent_box { max-width: calc(900px - 40px); } }
+@media screen and (max-width: 889px) and (min-width: 0) { .cent_boxs .cent_box { max-width: calc(100% - 40px); } }
+
 .in_footer { display: inline-block; max-width: 900px; width: 100%; margin: 0 auto; padding-bottom: 20px; margin-top: -60px; }
+.in_footer.no_ma { margin-top: 20px; }
 @media screen and (max-width: 1079px) and (min-width: 768px) { .in_footer { max-width: 660px; margin-top: -30px; } }
 @media screen and (max-width: 767px) and (min-width: 0) { .in_footer { max-width: auto; margin-top: 0; padding: 10px 10px 10px 10px; /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eb008b+0,e35984+50,df8e80+100 */ background: #eb008b; /* Old browsers */ background: -moz-linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#df8e80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ } }
 
@@ -80,3 +90,34 @@ body { position: relative; display: inline-block; width: 100%; height: 100vh; ma
 .f_type_boxs .f_type.fw90 { width: 88%; }
 @media screen and (max-width: 767px) and (min-width: 0) { .f_type_boxs .f_type.fw90 { width: 100%; padding-left: 15px; } }
 .f_type_boxs .f_type.fwb { font-weight: 600; }
+
+.page_cent { display: inline-block; width: 100%; }
+
+.tag_boxs { display: inline-block; width: 100%; text-align: left; padding-bottom: 20px; }
+
+.tag_a { display: inline-block; color: #4a8093; font-size: .9; text-decoration: none; cursor: pointer; }
+.tag_a:hover { color: #eb008b; }
+.tag_a:hover:after { color: #4a8093; }
+.tag_a:after { display: inline-block; content: '>'; padding: 0 10px; }
+.tag_a:last-child:after { display: none; }
+
+.news_box { display: inline-block; width: 100%; border-bottom: 2px dotted #c08f47; padding: 15px 0; *zoom: 1; }
+.news_box:after { display: table; content: ""; line-height: 0; clear: both; }
+.news_box .n_date { display: inline-block; background-color: #c08f47; font-size: 1rem; -moz-border-radius: 30px; -webkit-border-radius: 30px; border-radius: 30px; padding: 5px 10px; color: white; float: left; }
+@media screen and (max-width: 449px) and (min-width: 0) { .news_box .n_date { font-size: .9rem; padding: 5px 10px; } }
+.news_box .n_titel { display: inline-block; cursor: pointer; float: left; font-size: 1rem; color: #c08f47; font-weight: 600; padding: 0; margin: 0 0 0 30px; line-height: 20px; }
+.news_box .n_titel:hover, .news_box .n_titel:active { color: #eb008b; }
+.news_box .n_titel.n_outlink { width: calc(100% - 165px); text-decoration: none; text-align: left; padding-top: 8px; }
+@media screen and (max-width: 449px) and (min-width: 0) { .news_box .n_titel.n_outlink { width: 100%; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .news_box .n_titel { width: 100%; text-align: left; margin: 0; line-height: 25px; padding-top: 10px; } }
+.news_box .n_content { display: none; width: 100%; padding: 15px 0; border-top: 1px solid #91609d; margin-top: 15px; text-align: left; }
+.news_box .n_content.show_co { display: inline-block; }
+.news_box .n_content p { display: inline-block; padding: 0 10px; margin: 0; color: #171717; font-size: 18px; line-height: 30px; }
+.news_box .plan_boxs { display: inline-block; float: left; }
+.news_box .plan_boxs:after { display: inline-block; content: "│"; padding: 0 10px; font-size: 24px; color: #91609d; }
+@media screen and (max-width: 1089px) and (min-width: 450px) { .news_box .plan_boxs:after { font-size: 18px; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .news_box .plan_boxs:after { font-size: 15px; } }
+.news_box .plan_boxs a { display: inline-block; cursor: pointer; font-size: 24px; color: #91609d; text-decoration: none; margin-bottom: 10px; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; }
+@media screen and (max-width: 1089px) and (min-width: 450px) { .news_box .plan_boxs a { font-size: 18px; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .news_box .plan_boxs a { font-size: 15px; } }
+.news_box .plan_boxs a:hover, .news_box .plan_boxs a:active, .news_box .plan_boxs a.plan_ok { color: #531e78; font-weight: 600; }
