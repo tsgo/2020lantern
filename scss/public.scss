@@ -289,7 +289,7 @@ body {
   width: 100%;
   text-align: left;
   padding: 0 10px;
-  margin-top: 50px;
+  margin-top: 20px;
 
   a {
     display: inline-block;
@@ -366,9 +366,17 @@ body {
     background-size: 90%;
   }
 
-  @include range-width(0, 890px) {
+  @include range-width(770px, 890px) {
     margin: 0;
     background-size: cover;
+  }
+
+  @include range-width(450px, 770px) {
+    margin-top: 45px;
+  }
+
+  @include range-width(0, 450px) {
+    margin-top: 30px;
   }
 
   .cent_box {
@@ -520,7 +528,10 @@ body {
   border-bottom: 2px dotted rgba(192, 143, 71, 1.00); 
   padding: 15px 0;
   @include clearfix();
-  
+
+  @include range-width(0, 450px) {
+    padding: 0 0 10px 0;
+  }
 
   .n_date {
     display: inline-block;
@@ -604,42 +615,227 @@ body {
       display: inline-block;
       content: "│";
       padding: 0 10px;
-      font-size: 24px;
-      color: rgba(145, 96, 157, 1.00);
+      font-size: 1.4rem;
+      color: rgba(184, 132, 62, 1.00);
 
       @include range-width(450px, 1090px) {
-        font-size: 18px;
+        font-size: 1.2rem;
       }
 
       @include range-width(0, 450px) {
-        font-size: 15px;
+        font-size: 1rem;
       }
     }
 
     a {
       display: inline-block;
       cursor: pointer;
-      font-size: 24px;
-      color: rgba(145, 96, 157, 1.00);
+      font-size: 1.4rem;
+      color: rgba(184, 132, 62, 1.00);
       text-decoration: none;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
       @include transition(all .3s);
 
       @include range-width(450px, 1090px) {
-        font-size: 18px;
+        font-size: 1.2rem;
       }
 
       @include range-width(0, 450px) {
-        font-size: 15px;
+        font-size: 1rem;
       }
 
       &:hover, &:active, &.plan_ok {
-        color: rgba(83, 30, 120, 1.00);
+        color: rgba(184, 132, 62, 1.00);
         font-weight: 600;
       }
     }
   }
 } 
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.p_title {
+  display: inline-block;
+  font-size: 1.8rem;
+
+  @include range-width(0, 450px) {
+    font-size: 1.4rem;
+    padding-top: 10px;
+    text-align: left;
+  }
+}
+
+.p_cent_type {
+  display: inline-block;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.6rem;
+
+  &.padtop20 {
+    padding: 20px 0;
+  }
+}
+
+
+.all_img {
+  display: inline-block;
+  width: 100%;
+  max-width: 920px;
+}
+
+.little_boxs {
+  display: inline-block;
+  width: 100%;
+  @include clearfix();
+
+  &.ac_tag {
+    margin-top: 20px;
+  }
+
+  .little01 {
+    display: inline-block;
+    background-color: rgba(192, 143, 71, 1.00);
+    @include border-radius(30px);
+    padding: 15px 20px;
+    font-size: 24px;
+    color: white;
+    float: left;
+
+    @include range-width(0, 400px) {
+      padding: 10px 15px;
+      font-size: 18px;
+    }
+  }
+
+  .little02 {
+    display: inline-block;
+    cursor: pointer;
+    width: calc(100% / 4 - 10px * 5 / 3);
+    text-decoration: none;
+    border: 1px solid rgba(192, 143, 71, 1);
+    @include border-radius(30px);
+    padding: 10px 0;
+    font-size: 1.4rem;
+    color: rgba(192, 143, 71, 1);
+    float: left;
+    @include transition(all .3s);
+
+    @include range-width(755px, 1090px) {
+      font-size: 1.2rem;
+      padding: 10px 0;
+    }
+
+    @include range-width(701px, 755px) {
+      font-size: 1.2rem;
+      padding: 10px 0;
+    }
+
+    @include range-width(330px, 701px) {
+      font-size: 1rem;
+      padding: 10px 0;
+      margin: 0 10px 10px 10px !important;
+      width: calc(50% - 10px * 2);
+    }
+
+    @include range-width(0, 330px) {
+      font-size: .9rem;
+      padding: 10px 0;
+      margin: 0 5px 10px 5px !important;
+      width: calc(50% - 5px * 2);
+    }
+
+    &:nth-child(1) {
+      margin-right: 10px;
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      margin: 0 10px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 10px;
+    }
+
+    &:hover, &:active, &.l_ok {
+      color: white;
+      background-color: rgba(192, 143, 71, 1);
+    }
+  }
+
+  .little03 {
+    display: inline-block;
+    cursor: pointer;
+    width: calc(100% / 3 - 10px * 4 / 2);
+    text-decoration: none;
+    border: 1px solid rgba(192, 143, 71, 1);
+    @include border-radius(30px);
+    padding: 10px 0;
+    font-size: 1.4rem;
+    color: rgba(192, 143, 71, 1);
+    float: left;
+    @include transition(all .3s);
+
+    @include range-width(755px, 1090px) {
+      font-size: 1.2rem;
+      padding: 10px 0;
+    }
+
+    @include range-width(701px, 755px) {
+      font-size: 1.2rem;
+      padding: 10px 0;
+    }
+
+    @include range-width(330px, 701px) {
+      font-size: 1rem;
+      padding: 10px 0;
+      margin: 0 10px 10px 10px !important;
+      width: calc(50% - 10px * 2);
+    }
+
+    @include range-width(0, 330px) {
+      font-size: .9rem;
+      padding: 10px 0;
+      margin: 0 5px 10px 5px !important;
+      width: calc(50% - 5px * 2);
+    }
+
+    &:nth-child(1) {
+      margin-right: 10px;
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      margin: 0 10px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 10px;
+    }
+
+    &:hover, &:active, &.l_ok {
+      color: white;
+      background-color: rgba(192, 143, 71, 1);
+    }
+  }
+
+  p {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0;
+    float: left;
+    color: rgba(192, 143, 71, 1.00);
+    font-size: 24px;
+    float: left;
+    line-height: 63px;
+
+     @include range-width(0, 400px) {
+      line-height: 45px;
+      font-size: 18px;
+    }
+  }
+}
 
 
 
