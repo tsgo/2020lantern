@@ -7,11 +7,12 @@
 
 @import "Ginkgo";
 
-body {
+body { 
   position: relative;
 
   display: inline-block;
   width: 100%;
+  height: 100vh;
 
   margin: 0;
   padding: 0;
@@ -21,285 +22,410 @@ body {
   text-align: center;
   font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 
-  background-color: rgba(0, 61, 86, 1.00);
+  // background-attachment: fixed;
+  // background-position: center 70%;
+  // background-image: url(../img/in_image.png);
+  // background-repeat: no-repeat;
+  // background-size: 98%;
+  background-color: #004059;
   
   // 文字染色，背景色、文字色
   // @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
 }
 
 
-// 首頁框架
-.top {
+.it_l, .it_r, .if_l, .if_r {
   display: inline-block;
-  width: 100%;
-  @include clearfix();
-  position: fixed;
+  position: absolute;
+}
+
+
+// 首頁・上面・左邊
+.it_l {
   top: 0;
   left: 0;
-  z-index: 99;
 
-  .menuboxs {
-    display: inline-block;
-    width: calc(100% - 336px - 242px);
-    @include clearfix();
-    padding-top: 30px;
-    margin-left: -30px;
-
-    div {
-      display: inline-block;
-      width: calc(100% / 6);
-      float: left;
-      
-      a {
-        display: inline-block;
-        widows: 100%;
-        font-size: 1.1rem;
-        color: white;
-        text-decoration: none;
-        line-height: 63px;
-        background-image: none;
-        @include transition(all, .3s);
-
-        &:hover {
-          cursor: pointer;
-          background-image: url(../img/menu_bg.png);
-          background-repeat: no-repeat;
-          display: inline-block;
-          height: 63px;
-          width: 144px;
-        }
-      }
-    }
-  }
-
-  .Ll, .Rl {
-    direction: inline-block;
+  img {
     width: 100%;
-  }
+    max-width: 224px;
 
-  .Ll {
-    max-width: 336px;
-    float: left;
-  }
+    @include range-width(1080px, 1245px) {
+      max-width: 154px;
+    }
 
-  .Rl {
+    @include range-width(768px, 1080px) {
+      max-width: 122px;
+    }
+
+    @include range-width(325px, 768px) {
+      max-width: 90px;
+    }
+
+    @include range-width(0, 325px) {
+      max-width: 60px;
+    }
+  }
+}
+
+// 首頁・上面・右邊
+.it_r{
+  top: 0;
+  right: 0;
+
+  img {
+    width: 100%;
     max-width: 242px;
-    float: right;
-  }
-}
 
-
-.cent {
-  display: inline-block;
-  width: 100%;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  z-index: 88;
-  @include clearfix();
-
-
-  .CL, .CR {
-    display: inline-block;
-  }
-
-  .CL {
-    width: 20%;
-    float: left;
-    @include clearfix();
-    
-    .CLi {
-      display: inline-block;
-      width: 100%;
-      max-width: 249px;
-      float: left;
+    @include range-width(1080px, 1245px) {
+      max-width: 172px;
     }
-  }
 
-  .CR {
-    width: 80%;
-    float: right;
-    .CRi {
-      display: inline-block;
-      width: 100%;
-      max-width: 1250px;
+    @include range-width(768px, 1080px) {
+      max-width: 112px;
+    }
+
+    @include range-width(325px, 768px) {
+      max-width: 90px;
+    }
+
+    @include range-width(0, 325px) {
+      max-width: 60px;
     }
   }
 }
 
-.footer {
-  display: inline-block;
-  width: 100%;
-  position: fixed;
+// 首頁・下面・左邊
+.if_l {
   bottom: 0;
   left: 0;
-  background-image: url(../img/f_bg.png); 
-  background-repeat: repeat-x;
-  background-position: left bottom;
-  @include clearfix();
 
-  .fboxs {
-    display: inline-block;
-    width: calc(100% - 166px - 233px - 40px);
-    margin: 0 10px 0 30px;
+  img {
+    width: 100%;
+    max-width: 166px;
 
-    .f_types {
-      display: inline-block;
-      width: 100%;
-      @include clearfix();
-      text-align: left;
-      padding-top: 10px;
+    @include range-width(1080px, 1245px) {
+      max-width: 90px;
+    }
 
-      .f_tl, .f_tr {
-        display: inline-block;
-        padding: 0;
-        margin: 0;
-        color: white;
-        font-size: .9rem;
-        float: left;
-      }
+    @include range-width(768px, 1080px) {
+      max-width: 70px;
+    }
 
-      .f_tl {
-        width: 10%;
-        font-weight: 600;
-      }
-
-      .f_tr {
-        width: 90%;
-      }
+    @include range-width(0, 768px) {
+      display: none;
     }
   }
+}
 
-  .fL, .fR {
-    direction: inline-block;
+// 首頁・下面・右邊
+.if_r {
+  bottom: 0;
+  right: 0;
+
+  img {
     width: 100%;
-  }
-
-  .fL {
-    max-width: 166px;
-    float: left;
-  }
-  .fR {
     max-width: 233px;
-    float: right;
+
+    @include range-width(1080px, 1245px) {
+      max-width: 157px;
+    }
+
+    @include range-width(768px, 1080px) {
+      max-width: 117px;
+    }
+
+    @include range-width(0, 768px) {
+      display: none;
+    }
   }
 }
 
 
-// 內頁框架
-.p_top {
+.i_menu_boxs {
   display: inline-block;
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   @include clearfix();
-  padding: 10px 0 20px 10px;
 
-  .pt_L {
+  @include range-width(768px, 1080px) {
+    max-width: 500px;
+  }
+
+  @include range-width(610px, 768px) {
+    max-width: 500px;
+    padding: 20px 0;
+  }
+
+  @include range-width(0, 610px) {
+    max-width: 300px;
+    padding: 20px 0;
+  }
+
+
+  .i_icon_boxs {
     display: inline-block;
     width: 100%;
-    max-width: 200px;
-    float: left;
+    padding-right: 15px; 
+    padding-top: 30px;
+
+    @include range-width(768px, 1080px) {
+      margin-right: -12px;
+      padding-right: 0;
+    }
+
+    @include range-width(0, 768px) {
+      display: none;
+    }
 
     a {
       display: inline-block;
-      width: 100%;
-      cursor: pointer;
-      outline: 0;
+      widows: 100%;
+      font-size: .9rem;
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      float: right;
 
-      img {
-        display: inline-block;
-        width: 100%;
-        max-width: 200px;
+      &:hover {
+        color: rgba(235, 0, 139, 1.00);
       }
     }
   }
 
-  .pt_C {
+  .i_menu {
     display: inline-block;
-    width: calc(100% - 200px - 200px);
-    // max-width: 990px;
+    width: calc(100% / 6);
     float: left;
-    @include clearfix();
 
-    .pt_icon_boxs {
-      display: inline-block;
-      float: right;
-
-      a {
-        display: inline-block;
-        widows: 100%;
-        font-size: 1.1rem;
-        line-height: 70px;
-        color: white;
-        text-decoration: none;
-      }
+    @include range-width(0, 768px) {
+      width: calc(100% / 3);
     }
 
-    .pt_menu_boxs {
+    a {
       display: inline-block;
-      width: 100%;
+      position: relative;
+      widows: 100%;
+      font-size: 1rem;
+      color: white;
+      text-decoration: none;
+      line-height: 60px;
+      @include transition(all, .3s);
 
-      .pt_menu {
-        display: inline-block;
-        width: calc(90% / 6);
+      @include range-width(768px, 1080px) {
+        font-size: .9rem;
+      }
 
-        a {
+      @include range-width(450px, 768px) {
+        font-size: 1rem;
+        line-height: 40px;
+      }
+
+      @include range-width(0, 450px) {
+        display: none;
+      }
+
+      &:hover {
+        &:after {
           display: inline-block;
-          widows: 100%;
-          font-size: 1rem;
-          color: white;
-          text-decoration: none;
-          line-height: 44px;
-          background-image: none;
-          @include transition(all, .3s);
-
-          &:hover {
-            cursor: pointer;
-            background-image: url(../img/menu_bg.png);
-            background-repeat: no-repeat;
-            display: inline-block;
-            height: 44px;
-            width: 100px;
-          }
+          content: '';
+          position: absolute;
+          left: -3px;
+          bottom: 0;
+          width: 110%;
+          height: 5px;
+          @include border-radius(5px);
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eb008b+0,e35984+50,df8e80+100 */
+          background: #eb008b; /* Old browsers */
+          background: -moz-linear-gradient(45deg,  #eb008b 0%, #e35984 50%, #df8e80 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(45deg,  #eb008b 0%,#e35984 50%,#df8e80 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(45deg,  #eb008b 0%,#e35984 50%,#df8e80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#df8e80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
         }
       }
     }
   }
 
-  .pt_R {
-    display: inline-block;
-    width: 100%;
-    max-width: 200px;
-    float: right;
-    @include clearfix();
+  .menu_list {
+    display: none;
 
-    img {
+    @include range-width(0, 450px) {
       display: inline-block;
+    }
+
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    padding-bottom: 10px;
+
+    &:after {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
       width: 100%;
-      max-width: 200px;
-      float: right;
+      height: 5px;
+      @include border-radius(5px);
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eb008b+0,e35984+50,df8e80+100 */
+      background: #eb008b; /* Old browsers */
+      background: -moz-linear-gradient(45deg,  #eb008b 0%, #e35984 50%, #df8e80 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(45deg,  #eb008b 0%,#e35984 50%,#df8e80 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(45deg,  #eb008b 0%,#e35984 50%,#df8e80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#df8e80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     }
   }
 }
 
-.p_cent {
+
+.mobile_boxs {
+
+  &.no_show {
+    display: none;
+  }
+
   display: inline-block;
   width: 100%;
-  // min-height: 900px;
-  background-image:url(../img/Group2.png);
-  background-repeat:no-repeat;
-  background-size: cover;
-  margin-bottom: 30px;
+  text-align: left;
+  padding: 0 10px;
+  margin-top: 50px;
 
-  .pc_boxs {
+  a {
     display: inline-block;
     width: 100%;
-    max-width: 990px;
-    min-height: 800px;
-    background-color: rgba(248, 242, 222, 1.00);
+    line-height: 50px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    border-top: 1px dotted rgba(252, 208, 129, .8);
+    text-align: center;
+
+    &:hover, &:active {
+      color: rgba(248, 226, 10, 1.00);
+    }
+
+    &:last-child {
+      border-bottom: 1px dotted rgba(252, 208, 129, .8);
+    }
   }
 }
 
-.p_footer {}
+
+
+.i_cent_boxs {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 20px 0 20px;
+  margin-top: -60px;
+
+  @include range-width(450px, 768px) {
+    margin-top: -40px;
+  }
+
+  @include range-width(0, 450px) {
+    margin-top: auto;
+  }  
+
+  .in_mouse {
+    width: 100%;
+    max-width: 1200px;
+
+    @include range-width(0, 450px) {
+      display: none;
+    }    
+  }
+
+  .in_mouse_m {
+    display: none;
+
+    @include range-width(0, 450px) {
+      display: inline-block;
+      width: 100%;
+      max-width: 450px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+
+.in_footer {
+  display: inline-block;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  margin-top: -60px;
+
+  @include range-width(768px, 1080px) {
+    max-width: 660px;
+    margin-top: -30px;
+  }
+
+  @include range-width(0, 768px) {
+    max-width: auto;
+    margin-top: 0;
+    padding: 10px 10px 10px 10px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eb008b+0,e35984+50,df8e80+100 */
+    background: #eb008b; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #eb008b 0%, #e35984 50%, #df8e80 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #eb008b 0%,#e35984 50%,#df8e80 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #eb008b 0%,#e35984 50%,#df8e80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#df8e80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+}
+
+
+// type
+.f_type_boxs {
+  display: inline-block;
+  width: 100%;
+  @include clearfix();
+  text-align: left;
+
+  .f_type {
+    display: inline-block;
+    font-size: .9rem;
+    color: white;
+    float: left;
+    padding: 0;
+    margin: 0;
+
+    @include range-width(768px, 1080px) {
+      font-size: .8rem;
+    }
+
+    &.fw10 {
+      width: 12%;
+
+      &:before {
+        display: inline-block;
+        content: '・';
+      }
+
+      @include range-width(0, 768px) {
+        width: 100%;
+      }
+    }
+
+    &.fw90 {
+      width: 88%;
+
+      @include range-width(0, 768px) {
+        width: 100%;
+        padding-left: 15px;
+      }
+    }
+
+    &.fwb {
+      font-weight: 600;
+    }
+  }
+}
+
+
+
+
 
 
 

@@ -1,56 +1,82 @@
 @charset "UTF-8";
 *, *:after, *:before { vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: subpixel-antialiased; -moz-font-smoothing: subpixel-antialiased; -ms-font-smoothing: subpixel-antialiased; -o-font-smoothing: subpixel-antialiased; }
 
-body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #5a5a5a; font-size: 12px; text-align: center; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; background-color: #003d56; }
+body { position: relative; display: inline-block; width: 100%; height: 100vh; margin: 0; padding: 0; color: #5a5a5a; font-size: 12px; text-align: center; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; background-color: #004059; }
 
-.top { display: inline-block; width: 100%; *zoom: 1; position: fixed; top: 0; left: 0; z-index: 99; }
-.top:after { display: table; content: ""; line-height: 0; clear: both; }
-.top .menuboxs { display: inline-block; width: calc(100% - 336px - 242px); *zoom: 1; padding-top: 30px; margin-left: -30px; }
-.top .menuboxs:after { display: table; content: ""; line-height: 0; clear: both; }
-.top .menuboxs div { display: inline-block; width: calc(100% / 6); float: left; }
-.top .menuboxs div a { display: inline-block; widows: 100%; font-size: 1.1rem; color: white; text-decoration: none; line-height: 63px; background-image: none; -moz-transition: all, 0.3s; -o-transition: all, 0.3s; -webkit-transition: all, 0.3s; transition: all, 0.3s; }
-.top .menuboxs div a:hover { cursor: pointer; background-image: url(../img/menu_bg.png); background-repeat: no-repeat; display: inline-block; height: 63px; width: 144px; }
-.top .Ll, .top .Rl { direction: inline-block; width: 100%; }
-.top .Ll { max-width: 336px; float: left; }
-.top .Rl { max-width: 242px; float: right; }
+.it_l, .it_r, .if_l, .if_r { display: inline-block; position: absolute; }
 
-.cent { display: inline-block; width: 100%; position: absolute; top: 10px; left: 0; z-index: 88; *zoom: 1; }
-.cent:after { display: table; content: ""; line-height: 0; clear: both; }
-.cent .CL, .cent .CR { display: inline-block; }
-.cent .CL { width: 20%; float: left; *zoom: 1; }
-.cent .CL:after { display: table; content: ""; line-height: 0; clear: both; }
-.cent .CL .CLi { display: inline-block; width: 100%; max-width: 249px; float: left; }
-.cent .CR { width: 80%; float: right; }
-.cent .CR .CRi { display: inline-block; width: 100%; max-width: 1250px; }
+.it_l { top: 0; left: 0; }
+.it_l img { width: 100%; max-width: 224px; }
+@media screen and (max-width: 1244px) and (min-width: 1080px) { .it_l img { max-width: 154px; } }
+@media screen and (max-width: 1079px) and (min-width: 768px) { .it_l img { max-width: 122px; } }
+@media screen and (max-width: 767px) and (min-width: 325px) { .it_l img { max-width: 90px; } }
+@media screen and (max-width: 324px) and (min-width: 0) { .it_l img { max-width: 60px; } }
 
-.footer { display: inline-block; width: 100%; position: fixed; bottom: 0; left: 0; background-image: url(../img/f_bg.png); background-repeat: repeat-x; background-position: left bottom; *zoom: 1; }
-.footer:after { display: table; content: ""; line-height: 0; clear: both; }
-.footer .fboxs { display: inline-block; width: calc(100% - 166px - 233px - 40px); margin: 0 10px 0 30px; }
-.footer .fboxs .f_types { display: inline-block; width: 100%; *zoom: 1; text-align: left; padding-top: 10px; }
-.footer .fboxs .f_types:after { display: table; content: ""; line-height: 0; clear: both; }
-.footer .fboxs .f_types .f_tl, .footer .fboxs .f_types .f_tr { display: inline-block; padding: 0; margin: 0; color: white; font-size: .9rem; float: left; }
-.footer .fboxs .f_types .f_tl { width: 10%; font-weight: 600; }
-.footer .fboxs .f_types .f_tr { width: 90%; }
-.footer .fL, .footer .fR { direction: inline-block; width: 100%; }
-.footer .fL { max-width: 166px; float: left; }
-.footer .fR { max-width: 233px; float: right; }
+.it_r { top: 0; right: 0; }
+.it_r img { width: 100%; max-width: 242px; }
+@media screen and (max-width: 1244px) and (min-width: 1080px) { .it_r img { max-width: 172px; } }
+@media screen and (max-width: 1079px) and (min-width: 768px) { .it_r img { max-width: 112px; } }
+@media screen and (max-width: 767px) and (min-width: 325px) { .it_r img { max-width: 90px; } }
+@media screen and (max-width: 324px) and (min-width: 0) { .it_r img { max-width: 60px; } }
 
-.p_top { display: inline-block; width: 100%; *zoom: 1; padding: 10px 0 20px 10px; }
-.p_top:after { display: table; content: ""; line-height: 0; clear: both; }
-.p_top .pt_L { display: inline-block; width: 100%; max-width: 200px; float: left; }
-.p_top .pt_L a { display: inline-block; width: 100%; cursor: pointer; outline: 0; }
-.p_top .pt_L a img { display: inline-block; width: 100%; max-width: 200px; }
-.p_top .pt_C { display: inline-block; width: calc(100% - 200px - 200px); float: left; *zoom: 1; }
-.p_top .pt_C:after { display: table; content: ""; line-height: 0; clear: both; }
-.p_top .pt_C .pt_icon_boxs { display: inline-block; float: right; }
-.p_top .pt_C .pt_icon_boxs a { display: inline-block; widows: 100%; font-size: 1.1rem; line-height: 70px; color: white; text-decoration: none; }
-.p_top .pt_C .pt_menu_boxs { display: inline-block; width: 100%; }
-.p_top .pt_C .pt_menu_boxs .pt_menu { display: inline-block; width: calc(90% / 6); }
-.p_top .pt_C .pt_menu_boxs .pt_menu a { display: inline-block; widows: 100%; font-size: 1rem; color: white; text-decoration: none; line-height: 44px; background-image: none; -moz-transition: all, 0.3s; -o-transition: all, 0.3s; -webkit-transition: all, 0.3s; transition: all, 0.3s; }
-.p_top .pt_C .pt_menu_boxs .pt_menu a:hover { cursor: pointer; background-image: url(../img/menu_bg.png); background-repeat: no-repeat; display: inline-block; height: 44px; width: 100px; }
-.p_top .pt_R { display: inline-block; width: 100%; max-width: 200px; float: right; *zoom: 1; }
-.p_top .pt_R:after { display: table; content: ""; line-height: 0; clear: both; }
-.p_top .pt_R img { display: inline-block; width: 100%; max-width: 200px; float: right; }
+.if_l { bottom: 0; left: 0; }
+.if_l img { width: 100%; max-width: 166px; }
+@media screen and (max-width: 1244px) and (min-width: 1080px) { .if_l img { max-width: 90px; } }
+@media screen and (max-width: 1079px) and (min-width: 768px) { .if_l img { max-width: 70px; } }
+@media screen and (max-width: 767px) and (min-width: 0) { .if_l img { display: none; } }
 
-.p_cent { display: inline-block; width: 100%; background-image: url(../img/Group2.png); background-repeat: no-repeat; background-size: cover; margin-bottom: 30px; }
-.p_cent .pc_boxs { display: inline-block; width: 100%; max-width: 990px; min-height: 800px; background-color: #f8f2de; }
+.if_r { bottom: 0; right: 0; }
+.if_r img { width: 100%; max-width: 233px; }
+@media screen and (max-width: 1244px) and (min-width: 1080px) { .if_r img { max-width: 157px; } }
+@media screen and (max-width: 1079px) and (min-width: 768px) { .if_r img { max-width: 117px; } }
+@media screen and (max-width: 767px) and (min-width: 0) { .if_r img { display: none; } }
+
+.i_menu_boxs { display: inline-block; width: 100%; max-width: 800px; margin: 0 auto; *zoom: 1; }
+.i_menu_boxs:after { display: table; content: ""; line-height: 0; clear: both; }
+@media screen and (max-width: 1079px) and (min-width: 768px) { .i_menu_boxs { max-width: 500px; } }
+@media screen and (max-width: 767px) and (min-width: 610px) { .i_menu_boxs { max-width: 500px; padding: 20px 0; } }
+@media screen and (max-width: 609px) and (min-width: 0) { .i_menu_boxs { max-width: 300px; padding: 20px 0; } }
+.i_menu_boxs .i_icon_boxs { display: inline-block; width: 100%; padding-right: 15px; padding-top: 30px; }
+@media screen and (max-width: 1079px) and (min-width: 768px) { .i_menu_boxs .i_icon_boxs { margin-right: -12px; padding-right: 0; } }
+@media screen and (max-width: 767px) and (min-width: 0) { .i_menu_boxs .i_icon_boxs { display: none; } }
+.i_menu_boxs .i_icon_boxs a { display: inline-block; widows: 100%; font-size: .9rem; color: white; text-decoration: none; margin-right: 20px; float: right; }
+.i_menu_boxs .i_icon_boxs a:hover { color: #eb008b; }
+.i_menu_boxs .i_menu { display: inline-block; width: calc(100% / 6); float: left; }
+@media screen and (max-width: 767px) and (min-width: 0) { .i_menu_boxs .i_menu { width: calc(100% / 3); } }
+.i_menu_boxs .i_menu a { display: inline-block; position: relative; widows: 100%; font-size: 1rem; color: white; text-decoration: none; line-height: 60px; -moz-transition: all, 0.3s; -o-transition: all, 0.3s; -webkit-transition: all, 0.3s; transition: all, 0.3s; }
+@media screen and (max-width: 1079px) and (min-width: 768px) { .i_menu_boxs .i_menu a { font-size: .9rem; } }
+@media screen and (max-width: 767px) and (min-width: 450px) { .i_menu_boxs .i_menu a { font-size: 1rem; line-height: 40px; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .i_menu_boxs .i_menu a { display: none; } }
+.i_menu_boxs .i_menu a:hover:after { display: inline-block; content: ''; position: absolute; left: -3px; bottom: 0; width: 110%; height: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eb008b+0,e35984+50,df8e80+100 */ background: #eb008b; /* Old browsers */ background: -moz-linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#df8e80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ }
+.i_menu_boxs .menu_list { display: none; position: relative; font-size: 1.2rem; color: white; padding-bottom: 10px; }
+@media screen and (max-width: 449px) and (min-width: 0) { .i_menu_boxs .menu_list { display: inline-block; } }
+.i_menu_boxs .menu_list:after { display: inline-block; content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eb008b+0,e35984+50,df8e80+100 */ background: #eb008b; /* Old browsers */ background: -moz-linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#df8e80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ }
+
+.mobile_boxs { display: inline-block; width: 100%; text-align: left; padding: 0 10px; margin-top: 50px; }
+.mobile_boxs.no_show { display: none; }
+.mobile_boxs a { display: inline-block; width: 100%; line-height: 50px; font-size: 1.1rem; text-decoration: none; color: white; font-weight: 600; border-top: 1px dotted rgba(252, 208, 129, 0.8); text-align: center; }
+.mobile_boxs a:hover, .mobile_boxs a:active { color: #f8e20a; }
+.mobile_boxs a:last-child { border-bottom: 1px dotted rgba(252, 208, 129, 0.8); }
+
+.i_cent_boxs { display: inline-block; width: 100%; padding: 20px 20px 0 20px; margin-top: -60px; }
+@media screen and (max-width: 767px) and (min-width: 450px) { .i_cent_boxs { margin-top: -40px; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .i_cent_boxs { margin-top: auto; } }
+.i_cent_boxs .in_mouse { width: 100%; max-width: 1200px; }
+@media screen and (max-width: 449px) and (min-width: 0) { .i_cent_boxs .in_mouse { display: none; } }
+.i_cent_boxs .in_mouse_m { display: none; }
+@media screen and (max-width: 449px) and (min-width: 0) { .i_cent_boxs .in_mouse_m { display: inline-block; width: 100%; max-width: 450px; padding-bottom: 20px; } }
+
+.in_footer { display: inline-block; max-width: 900px; width: 100%; margin: 0 auto; padding-bottom: 20px; margin-top: -60px; }
+@media screen and (max-width: 1079px) and (min-width: 768px) { .in_footer { max-width: 660px; margin-top: -30px; } }
+@media screen and (max-width: 767px) and (min-width: 0) { .in_footer { max-width: auto; margin-top: 0; padding: 10px 10px 10px 10px; /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eb008b+0,e35984+50,df8e80+100 */ background: #eb008b; /* Old browsers */ background: -moz-linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(45deg, #eb008b 0%, #e35984 50%, #df8e80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#df8e80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ } }
+
+.f_type_boxs { display: inline-block; width: 100%; *zoom: 1; text-align: left; }
+.f_type_boxs:after { display: table; content: ""; line-height: 0; clear: both; }
+.f_type_boxs .f_type { display: inline-block; font-size: .9rem; color: white; float: left; padding: 0; margin: 0; }
+@media screen and (max-width: 1079px) and (min-width: 768px) { .f_type_boxs .f_type { font-size: .8rem; } }
+.f_type_boxs .f_type.fw10 { width: 12%; }
+.f_type_boxs .f_type.fw10:before { display: inline-block; content: '・'; }
+@media screen and (max-width: 767px) and (min-width: 0) { .f_type_boxs .f_type.fw10 { width: 100%; } }
+.f_type_boxs .f_type.fw90 { width: 88%; }
+@media screen and (max-width: 767px) and (min-width: 0) { .f_type_boxs .f_type.fw90 { width: 100%; padding-left: 15px; } }
+.f_type_boxs .f_type.fwb { font-weight: 600; }
