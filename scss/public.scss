@@ -13,7 +13,6 @@ body {
   display: inline-block;
   width: 100%;
   height: 100%;
-  // height: 100vh;
 
   margin: 0;
   padding: 0;
@@ -32,6 +31,10 @@ body {
   
   // 文字染色，背景色、文字色
   // @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
+
+  &.index_he {
+    height: 100vh;
+  }
 }
 
 
@@ -144,24 +147,28 @@ body {
 
 .i_menu_boxs {
   display: inline-block;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  width: calc(100% - 264px - 282px);
+  // max-width: calc(100% - 224px - 242px);
+  // margin: 0 auto;
   @include clearfix();
 
-  @include range-width(768px, 1080px) {
-    max-width: 500px;
-  }
+  @include range-width(1080px, 1245px) {
+      width: calc(100% - 204px - 172px);
+    }
 
-  @include range-width(610px, 768px) {
-    max-width: 500px;
-    padding: 20px 0;
-  }
+    @include range-width(768px, 1080px) {
+      width: calc(100% - 122px - 112px);
+    }
 
-  @include range-width(0, 610px) {
-    max-width: 300px;
-    padding: 20px 0;
-  }
+    @include range-width(325px, 768px) {
+      width: calc(100% - 90px - 90px);
+      padding-top: 20px;
+    }
+
+    @include range-width(0, 325px) {
+      width: calc(100% - 60px - 60px);
+      padding-top: 20px;
+    }
 
 
   .i_icon_boxs {
@@ -196,17 +203,38 @@ body {
 
   .i_menu {
     display: inline-block;
-    width: calc(100% / 6);
+    width: calc(100% / 7);
     float: left;
+    position: relative;
+
+    &:after {
+      display: inline-block;
+      content: '．';
+      color: white;
+      position: absolute;
+      top: 22px;
+      right: 0;
+    }
+
+    &:nth-last-child(2) {
+      &:after {
+        display: none;
+      }
+    }
+
 
     @include range-width(0, 768px) {
       width: calc(100% / 3);
+
+      &:after {
+        top: 12px;
+      }
     }
 
     a {
       display: inline-block;
       position: relative;
-      widows: 100%;
+      width: 100%;
       font-size: 1rem;
       color: white;
       text-decoration: none;
@@ -231,9 +259,30 @@ body {
           display: inline-block;
           content: '';
           position: absolute;
-          left: -3px;
+          left: 5%;
           bottom: 0;
-          width: 110%;
+          width: 90%;
+          height: 5px;
+          @include border-radius(5px);
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eb008b+0,e35984+50,df8e80+100 */
+          background: #eb008b; /* Old browsers */
+          background: -moz-linear-gradient(45deg,  #eb008b 0%, #e35984 50%, #df8e80 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(45deg,  #eb008b 0%,#e35984 50%,#df8e80 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(45deg,  #eb008b 0%,#e35984 50%,#df8e80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#df8e80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+      }
+
+      &.aac {
+        color: rgba(224, 125, 129, 1.00);
+        
+        &:after {
+          display: inline-block;
+          content: '';
+          position: absolute;
+          left: 5%;
+          bottom: 0;
+          width: 90%;
           height: 5px;
           @include border-radius(5px);
           /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eb008b+0,e35984+50,df8e80+100 */
@@ -246,6 +295,7 @@ body {
       }
     }
   }
+
 
   .menu_list {
     display: none;
@@ -358,7 +408,11 @@ body {
   background-position: center center;
   margin: 30px 0;
 
-  @include range-width(1350px, 1990px) {
+  @include range-width(1700px) {
+    background-size: 65%;
+  }
+
+  @include range-width(1350px, 1700px) {
     background-size: 80%;
   }
 
@@ -533,6 +587,11 @@ body {
     padding: 0 0 10px 0;
   }
 
+  &.top_Bbot {
+    margin-top: 15px;
+    border-top: 2px dotted rgba(192, 143, 71, 1.00); 
+  }
+
   .n_date {
     display: inline-block;
     background-color: rgba(192, 143, 71, 1.00);
@@ -627,6 +686,12 @@ body {
       }
     }
 
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
     a {
       display: inline-block;
       cursor: pointer;
@@ -661,6 +726,10 @@ p {
   display: inline-block;
   font-size: 1.8rem;
 
+  &.p_left {
+    float: left;
+  }
+
   @include range-width(0, 450px) {
     font-size: 1.4rem;
     padding-top: 10px;
@@ -673,12 +742,7 @@ p {
   font-size: 1rem;
   text-align: left;
   line-height: 1.6rem;
-
-  &.padtop20 {
-    padding: 20px 0;
-  }
 }
-
 
 .all_img {
   display: inline-block;
@@ -837,8 +901,46 @@ p {
   }
 }
 
+.add_type {
+  font-size: 1.2rem;
+  color: rgba(90, 90, 90, 1.00);
+  text-align: left;
+
+  @include range-width(0, 500px) {
+    font-style: 1rem;
+  }
+
+  &:before {
+    display: inline-block;
+    content: attr(title);
+    font-weight: 600;
+    color: rgba(228, 0, 127, 1.00);
+  }
+
+  &.add_2 {
+    display: inline-block;
+    width: 50%;
+    float: left;
+
+    @include range-width(0, 895px) {
+      width: 100%;
+    }
+  }
+}
 
 
+// 空間
+.pad20 {
+  padding: 20px 0;
+}
+
+.padbot20 {
+  padding-bottom: 20px;
+}
+
+.padtop20 {
+  padding-top: 20px;
+}
 
 
 
