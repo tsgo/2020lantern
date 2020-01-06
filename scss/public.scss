@@ -710,7 +710,7 @@ body {
       }
 
       &:hover, &:active, &.plan_ok {
-        color: rgba(184, 132, 62, 1.00);
+        color: #e00074;
         font-weight: 600;
       }
     }
@@ -739,6 +739,7 @@ p {
 
 .p_cent_type {
   display: inline-block;
+  width: 100%;
   font-size: 1rem;
   text-align: left;
   line-height: 1.6rem;
