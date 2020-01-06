@@ -717,6 +717,71 @@ body {
   }
 } 
 
+.show_boxs {
+  display: inline-block;
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px 0;
+ 
+  .show_box {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 20px;
+    @include clearfix();
+    
+    .sb_l {
+      display: inline-block;
+      width: 30%;
+      float: left;
+
+      img {
+        display: inline-block;
+        width: 100%;
+        max-width: 220px;
+
+        @include range-width(0, 630px) {
+          max-width: 100%;
+        }
+      }
+
+      @include range-width(0, 630px) {
+        width: 100%;
+      }
+    }
+
+    .sb_r {
+      display: inline-block;
+      width: 70%;
+      float: left;
+      padding-left: 20px;
+      text-align: left;
+
+      @include range-width(0, 630px) {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .s_name {
+        display: inline-block;
+        width: 100%;
+        font-size: 1.2rem;
+        color: rgba(184, 132, 62, 1.00);
+        font-weight: 600;
+        padding-bottom: 10px;
+      }
+
+      .s_type {
+        display: inline-block;
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
 p {
   padding: 0;
   margin: 0;
@@ -728,6 +793,15 @@ p {
 
   &.p_left {
     float: left;
+  }
+
+  &.p_right {
+    float: right !important;
+  }
+
+  &.p_pink {
+    color: rgba(228, 0, 127, 1.00);
+    font-weight: 600;
   }
 
   @include range-width(0, 450px) {
@@ -743,6 +817,410 @@ p {
   font-size: 1rem;
   text-align: left;
   line-height: 1.6rem;
+
+  &.pcright {
+    text-align: right !important;
+  }
+}
+
+.program_boxs {
+  display: inline-block;
+  width: 100%;
+  padding-top: 20px;
+
+  &.pppic {
+    padding-left: 30px;
+
+    @include range-width(0, 755px) {
+      padding-left: 0;
+    }
+  }
+
+
+  .program_box {
+    display: inline-block;
+    width: 100%;
+    @include clearfix();
+    margin-bottom: 20px;
+
+    .program_date {
+      display: inline-block;
+      width: 185px;
+      background-color: rgba(244, 187, 163, 1.00);
+      @include border-radius(30px);
+      padding: 10px 0;
+      margin-right: 30px;
+
+      font-size: 1.1rem;
+      color: rgba(0, 64, 89, 1.00);
+      font-weight: 600;
+
+      float: left;
+
+      @include range-width(450px, 680px) {
+        width: 100%;
+        font-size: 1rem;
+      }
+
+      @include range-width(0, 450px) {
+        width: 100%;
+        font-size: .9rem;
+      }
+    }
+
+    .program_list {
+      display: inline-block;
+      width: calc(100% - 185px - 30px);
+      border-bottom: 1px solid rgba(138, 138, 138, .5);
+      float: right;
+      text-align: left;
+      padding-bottom: 10px;
+
+
+      @include range-width(0, 680px) {
+        width: 100%;
+        padding-top: 10px;
+      }
+
+      .pl_boxs {
+        display: inline-block;
+        width: 100%;
+
+        @include range-width(0, 450px) {
+          padding: 0 10px;
+        }
+
+        .t_ps {
+          display: inline-block;
+          width: 100%;
+          font-size: 1.1rem;
+          color: rgba(190, 23, 28, 1.00);
+          text-align: left;
+          padding: 15px 0 10px 0;
+
+          @include range-width(0, 755px) {
+            font-size: 1rem;
+          }
+        }
+
+        p {
+          display: inline-block;
+          padding: 5px 0;
+          margin: 0;
+          font-size: 20px;
+
+          @include range-width(0, 450px) {
+            width: 100%;
+            font-size: 16px
+          }
+
+          i {
+            display: inline-block;
+            font-style: normal;
+            color: rgba(199, 56, 58, 1.00);
+          }
+
+          &:first-child {
+            &:after {
+              display: inline-block;
+              content: '│';
+              padding: 0 10px;
+
+              @include range-width(0, 450px) {
+                display: none;
+              }
+            }
+          }
+
+          &.tr_p {
+            padding-left: 95px;
+          }
+
+          &.park {
+            width: 100%;
+          }
+
+          &.park_title {
+            color: rgba(83, 30, 120, 1.00);
+            font-weight: 600;
+
+            &:first-child {
+              &:after {
+                display: none;
+              }
+            }
+          }
+
+          &.park_nobor {
+            &:first-child {
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .bus_boxs {
+          display: inline-block;
+          width: 100%;
+          @include clearfix();
+          
+          
+          .bus_name {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgba(168, 41, 46, 1.00);
+            float: left;
+            line-height: 50px;
+
+            @include range-width(0, 540px) {
+              width: 100%;
+              font-size: 18px;
+              line-height: 30px;
+            }
+          }
+
+          .bus_number {
+            display: inline-block;
+            width: 50%;
+            font-size: 20px;
+            color: rgba(42, 42, 42, 1.00);
+            float: left;
+            line-height: 50px;
+
+            @include range-width(0, 540px) {
+              width: 100%;
+              font-size: 18px;
+              line-height: 30px;
+            }
+          }
+
+          .bus_cent {
+            display: inline-block;
+            width: 100%;
+            font-size: 20px;
+            color: rgba(42, 42, 42, 1.00);
+            padding: 5px 0;
+
+            @include range-width(0, 540px) {
+              width: 100%;
+              font-size: 16px
+            }
+          }
+        }
+
+        .view_boxs {
+          display: inline-block;
+          width: 100%;
+          padding: 20px 0;
+
+          .view_box {
+            display: inline-block;
+            width: 100%;
+            @include clearfix();
+
+            padding-bottom: 20px;
+
+            .view_pic {
+              display: inline-block;
+              width: 100%;
+              max-width: 200px;
+              float: left;
+
+              @include range-width(0, 625px) {
+                width: 100%;
+                max-width: 100%;
+              }
+              
+              img {
+                width: 100%;
+                max-width: 200px;
+
+                @include range-width(0, 625px) {
+                  width: 100%;
+                  max-width: 100%;
+                }
+              }
+            }
+
+            .view_type {
+              display: inline-block;
+              width: 100%;
+              max-width: calc(100% - 200px);
+              float: left;
+              padding-left: 10px;
+
+              @include range-width(0, 625px) {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 0;
+              }
+
+
+              .v01 {
+                display: inline-block;
+                font-size: 20px;
+                font-weight: 600;
+                color: rgba(168, 41, 46, 1.00);
+                float: left;
+
+                @include range-width(0, 540px) {
+                  width: 100%;
+                  font-size: 18px;
+                  margin-top: 15px
+                }                   
+              }
+
+              .v02 {
+                display: inline-block;
+                width: 100%;
+                font-size: 20px;
+                color: rgba(42, 42, 42, 1.00);
+                padding: 5px 0;
+
+                @include range-width(0, 540px) {
+                  width: 100%;
+                  font-size: 16px
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pro_ttitle {
+      display: inline-block;
+      width: 100%;
+      font-size: 30px;
+      font-weight: 600;
+      color: rgba(192, 19, 17, 1.00);
+      text-align: left;
+      padding: 20px 0 10px 0;
+
+      @include range-width(450px, 860px) {
+        font-size: 24px;
+      }
+      @include range-width(0, 450px) {
+        font-size: 18px;
+      }
+
+      &:first-child {
+        padding-top: 50px;
+
+        @include range-width(0, 450px) {
+          padding-top: 30px;
+        }
+      }
+
+      &:before {
+        display: inline-block;
+        content: '\e902';
+        font-family: 'icomoon';
+        font-size: 50px;
+        color: rgba(207, 82, 79, 1.00);
+        padding-top: 0;
+        padding-right: 5px;
+        font-weight: 400;
+
+        @include range-width(450px, 860px) {
+          font-size: 24px;
+        }
+
+        @include range-width(0, 450px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .pro_boxs {
+      display: inline-block;
+      width: 100%;
+      padding: 20px 0;
+
+      border-bottom: 2px solid rgba(145, 96, 157, 1.00); 
+
+      .road {
+        display: inline-block;
+        color: rgba(23, 23, 23, 1.00);
+        font-size: 30px;
+        line-height: 30px;
+
+        @include range-width(450px, 860px) {
+          font-size: 20px;
+        }
+        @include range-width(0, 450px) {
+          font-size: 16px;
+        }
+
+        &.no_road {
+          width: 100%;
+          padding-bottom: 15px;
+          &:after {
+            display: none;
+          }
+        }
+
+        &:after {
+          display: inline-block;
+          content: '\e892';
+          font-family: 'icomoon';
+          font-size: 50px;
+          color: rgba(103, 169, 62, 1.00);
+          padding: 0 10px;
+
+          @include range-width(450px, 860px) {
+            font-size: 30px;
+          }
+          @include range-width(0, 450px) {
+            font-size: 20px;
+          }
+        }
+
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .road02 {
+      display: inline-block;
+      width: 100%;
+      padding: 10px 0;
+      @include clearfix();
+      text-align: left;
+      
+      > div {
+        display: inline-block;
+        width: calc(100% / 2);
+        color: rgba(23, 23, 23, 1.00);
+        font-size: 25px;
+        float: left;
+        padding: 10px 0;
+        line-height: 30px;
+
+        @include range-width(0, 860px) {
+          width: 100%;
+          font-size: 18px;
+        }
+
+        b {
+          color: rgba(231, 93, 32, 1.00);
+        }
+      }
+    }
+
+    .map {
+      display: list-item;
+      width: 100%;
+      max-width: 785px;
+      list-style: none;
+      margin: 10px 0;
+    }
+  }
 }
 
 .all_img {
@@ -769,8 +1247,8 @@ p {
     color: white;
     float: left;
 
-    @include range-width(0, 400px) {
-      padding: 10px 15px;
+    @include range-width(0, 450px) {
+      padding: 10px 0;
       font-size: 18px;
     }
   }
@@ -798,14 +1276,14 @@ p {
       padding: 10px 0;
     }
 
-    @include range-width(330px, 701px) {
+    @include range-width(450px, 701px) {
       font-size: 1rem;
       padding: 10px 0;
       margin: 0 10px 10px 10px !important;
       width: calc(50% - 10px * 2);
     }
 
-    @include range-width(0, 330px) {
+    @include range-width(0, 450px) {
       font-size: .9rem;
       padding: 10px 0;
       margin: 0 5px 10px 5px !important;
@@ -853,14 +1331,14 @@ p {
       padding: 10px 0;
     }
 
-    @include range-width(330px, 701px) {
+    @include range-width(450px, 701px) {
       font-size: 1rem;
       padding: 10px 0;
       margin: 0 10px 10px 10px !important;
       width: calc(50% - 10px * 2);
     }
 
-    @include range-width(0, 330px) {
+    @include range-width(0, 450px) {
       font-size: .9rem;
       padding: 10px 0;
       margin: 0 5px 10px 5px !important;
@@ -907,6 +1385,10 @@ p {
   color: rgba(90, 90, 90, 1.00);
   text-align: left;
 
+  &.add_right {
+    text-align: right !important;
+  }
+
   @include range-width(0, 500px) {
     font-style: 1rem;
   }
@@ -922,6 +1404,20 @@ p {
     display: inline-block;
     width: 50%;
     float: left;
+
+    @include range-width(0, 895px) {
+      width: 100%;
+    }
+  }
+
+  &.add_3 {
+    display: inline-block;
+    width: 50%;
+    margin: 0 auto;
+
+    &:before {
+      display: none;
+    }
 
     @include range-width(0, 895px) {
       width: 100%;
