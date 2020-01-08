@@ -770,6 +770,13 @@ body {
         color: rgba(184, 132, 62, 1.00);
         font-weight: 600;
         padding-bottom: 10px;
+
+        &:before {
+          display: inline-block;
+          content: attr(title);
+          font-size: 1.2rem;
+          color: rgba(228, 0, 127, 1.00);
+        }
       }
 
       .s_type {
@@ -780,7 +787,6 @@ body {
     }
   }
 }
-
 
 p {
   padding: 0;
@@ -827,15 +833,51 @@ p {
   display: inline-block;
   width: 100%;
   padding-top: 20px;
+  @include clearfix();
 
-  &.pppic {
-    padding-left: 30px;
+  span {
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    text-align: left;
+    // padding: 20px 0;
+    // line-height: 30px;
 
     @include range-width(0, 755px) {
-      padding-left: 0;
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    &.tr_o {
+      padding: 20px 0 0 0;
+    }
+
+    &.tr_list {
+      padding: 0 0 20px 30px;
+    } 
+
+    i {
+      display: inline-block;
+      font-style: normal;
+      color: rgba(190, 23, 28, 1.00);
+      font-weight: 600;
     }
   }
 
+  a {
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(90, 90, 90, 1.00);
+    text-align: left;
+    float: left;
+    padding-bottom: 15px;
+
+    &:hover {
+      color: rgba(228, 0, 127, 1.00);
+    }
+  }
 
   .program_box {
     display: inline-block;
@@ -1439,8 +1481,193 @@ p {
   padding-top: 20px;
 }
 
+.lantern_boxs {
+  display: inline-block;
+  width: 100%;
+  @include clearfix();
 
-.test {}
+  .trf_link {
+    display: inline-block;
+    float: right;
+    font-size: 20px;
+    color: rgba(83, 30, 120, 1.00);
+    font-weight: 600;
+    text-decoration: none;
+    padding-top: 10px;
+
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+
+  .lantern_title {
+    display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgba(228, 0, 127, 1.00);
+    text-align: left;
+    margin: 20px 0;
+
+    @include range-width(755px, 1090px) {
+      font-size: 24px;
+    }
+
+    @include range-width(0, 755px) {
+      font-size: 18px;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 400;
+      color: white;
+      margin: 0 10px;
+      @include border-radius(5px);
+      background-color: rgba(192, 19, 17, 1.00);
+      text-decoration: none;
+      padding: 5px 15px;
+      @include transition(all .3s);
+
+      &:hover, &:active {
+        background-color: rgba(192, 19, 17, .8);
+      }
+
+      @include range-width(755px, 1090px) {
+        font-size: 18px;
+        padding: 3px 10px;
+      }
+
+      @include range-width(0, 755px) {
+        font-size: 16px;
+        padding: 3px 10px;
+      }
+    }
+
+    &.sec_title {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  .sec_p {
+    display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    color: rgba(192, 19, 17, 1.00);
+    text-align: left;
+    padding-left: 30px;
+
+    &.tr_p {
+      color: rgba(231, 93, 32, 1.00);
+      font-weight: 600;
+      padding-bottom: 15px; 
+    }
+
+    @include range-width(755px, 1090px) {
+      font-size: 24px;
+    }
+
+    @include range-width(0, 755px) {
+      font-size: 18px;
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .room_type {
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    color: rgba(42, 42, 42, 1.00);
+    padding: 5px 0;
+    text-align: left;
+
+    @include range-width(0, 540px) {
+      width: 100%;
+      font-size: 16px
+    }
+  }
+
+  .table_boxs {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    @include clearfix();
+    text-align: left;
+
+    @include range-width(0, 875px) {
+      margin-top: 20px;
+    }
+
+    .room_name, .room_add, .room_phone {
+      display: inline-block;
+      float: left;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px 15px;
+      height: 45px;
+
+      @include range-width(0, 800px) {
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+
+
+    .room_name {
+      width: 40%;
+      color: white;
+      background-color: rgba(144, 97, 155, 1.00);
+
+      @include range-width(0, 875px) {
+        width: 100%;
+      }
+      
+      .da {
+        display: inline-block;
+        cursor: pointer;
+        float: right;
+        margin: 0 10px;
+        padding: 3px 10px;
+        @include border-radius(3px);
+        background-color: white;
+        color: rgba(82, 35, 118, 1.00);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+
+        &:hover, &:active {
+          background-color: rgba(255, 255, 255, .9);
+        }
+      }
+
+    }
+
+    .room_add {
+      width: 40%;
+      color: rgba(42, 42, 42, .8);
+      background-color: rgba(255, 255, 255, .5);
+
+      @include range-width(0, 875px) {
+        width: 100%;
+        background-color: rgba(255, 255, 255, .7);
+      }
+    }
+
+    .room_phone {
+      width: 20%;
+      color: white;
+      background-color: rgba(144, 97, 155, .5);
+
+      @include range-width(0, 875px) {
+        width: 100%;
+      }
+    }
+  }
+}
 
 
 

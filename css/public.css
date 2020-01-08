@@ -145,6 +145,7 @@ body.index_he { height: 100vh; }
 .show_boxs .show_box .sb_r { display: inline-block; width: 70%; float: left; padding-left: 20px; text-align: left; }
 @media screen and (max-width: 629px) and (min-width: 0) { .show_boxs .show_box .sb_r { width: 100%; padding-left: 0; padding-top: 15px; padding-bottom: 15px; } }
 .show_boxs .show_box .sb_r .s_name { display: inline-block; width: 100%; font-size: 1.2rem; color: #b8843e; font-weight: 600; padding-bottom: 10px; }
+.show_boxs .show_box .sb_r .s_name:before { display: inline-block; content: attr(title); font-size: 1.2rem; color: #e4007f; }
 .show_boxs .show_box .sb_r .s_type { display: inline-block; width: 100%; font-size: 1rem; }
 
 p { padding: 0; margin: 0; }
@@ -158,9 +159,15 @@ p { padding: 0; margin: 0; }
 .p_cent_type { display: inline-block; width: 100%; font-size: 1rem; text-align: left; line-height: 1.6rem; }
 .p_cent_type.pcright { text-align: right !important; }
 
-.program_boxs { display: inline-block; width: 100%; padding-top: 20px; }
-.program_boxs.pppic { padding-left: 30px; }
-@media screen and (max-width: 754px) and (min-width: 0) { .program_boxs.pppic { padding-left: 0; } }
+.program_boxs { display: inline-block; width: 100%; padding-top: 20px; *zoom: 1; }
+.program_boxs:after { display: table; content: ""; line-height: 0; clear: both; }
+.program_boxs span { display: inline-block; width: 100%; font-size: 1rem; text-align: left; }
+@media screen and (max-width: 754px) and (min-width: 0) { .program_boxs span { font-size: 16px; line-height: 25px; } }
+.program_boxs span.tr_o { padding: 20px 0 0 0; }
+.program_boxs span.tr_list { padding: 0 0 20px 30px; }
+.program_boxs span i { display: inline-block; font-style: normal; color: #be171c; font-weight: 600; }
+.program_boxs a { display: inline-block; font-size: 1rem; cursor: pointer; text-decoration: none; color: #5a5a5a; text-align: left; float: left; padding-bottom: 15px; }
+.program_boxs a:hover { color: #e4007f; }
 .program_boxs .program_box { display: inline-block; width: 100%; *zoom: 1; margin-bottom: 20px; }
 .program_boxs .program_box:after { display: table; content: ""; line-height: 0; clear: both; }
 .program_boxs .program_box .program_date { display: inline-block; width: 185px; background-color: #f4bba3; -moz-border-radius: 30px; -webkit-border-radius: 30px; border-radius: 30px; padding: 10px 0; margin-right: 30px; font-size: 1.1rem; color: #004059; font-weight: 600; float: left; }
@@ -271,3 +278,36 @@ p { padding: 0; margin: 0; }
 .padbot20 { padding-bottom: 20px; }
 
 .padtop20 { padding-top: 20px; }
+
+.lantern_boxs { display: inline-block; width: 100%; *zoom: 1; }
+.lantern_boxs:after { display: table; content: ""; line-height: 0; clear: both; }
+.lantern_boxs .trf_link { display: inline-block; float: right; font-size: 20px; color: #531e78; font-weight: 600; text-decoration: none; padding-top: 10px; }
+.lantern_boxs .trf_link:hover, .lantern_boxs .trf_link:active { text-decoration: underline; }
+.lantern_boxs .lantern_title { display: inline-block; width: 100%; font-size: 30px; font-weight: 600; color: #e4007f; text-align: left; margin: 20px 0; }
+@media screen and (max-width: 1089px) and (min-width: 755px) { .lantern_boxs .lantern_title { font-size: 24px; } }
+@media screen and (max-width: 754px) and (min-width: 0) { .lantern_boxs .lantern_title { font-size: 18px; } }
+.lantern_boxs .lantern_title a { display: inline-block; font-size: 20px; font-weight: 400; color: white; margin: 0 10px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background-color: #c01311; text-decoration: none; padding: 5px 15px; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.lantern_boxs .lantern_title a:hover, .lantern_boxs .lantern_title a:active { background-color: rgba(192, 19, 17, 0.8); }
+@media screen and (max-width: 1089px) and (min-width: 755px) { .lantern_boxs .lantern_title a { font-size: 18px; padding: 3px 10px; } }
+@media screen and (max-width: 754px) and (min-width: 0) { .lantern_boxs .lantern_title a { font-size: 16px; padding: 3px 10px; } }
+.lantern_boxs .lantern_title.sec_title { margin: 20px 0 0 0; }
+.lantern_boxs .sec_p { display: inline-block; width: 100%; font-size: 30px; color: #c01311; text-align: left; padding-left: 30px; }
+.lantern_boxs .sec_p.tr_p { color: #e75d20; font-weight: 600; padding-bottom: 15px; }
+@media screen and (max-width: 1089px) and (min-width: 755px) { .lantern_boxs .sec_p { font-size: 24px; } }
+@media screen and (max-width: 754px) and (min-width: 0) { .lantern_boxs .sec_p { font-size: 18px; } }
+.lantern_boxs img { width: 100%; max-width: 1000px; }
+.lantern_boxs .room_type { display: inline-block; width: 100%; font-size: 20px; color: #2a2a2a; padding: 5px 0; text-align: left; }
+@media screen and (max-width: 539px) and (min-width: 0) { .lantern_boxs .room_type { width: 100%; font-size: 16px; } }
+.lantern_boxs .table_boxs { display: inline-block; width: 100%; margin-top: 10px; *zoom: 1; text-align: left; }
+.lantern_boxs .table_boxs:after { display: table; content: ""; line-height: 0; clear: both; }
+@media screen and (max-width: 874px) and (min-width: 0) { .lantern_boxs .table_boxs { margin-top: 20px; } }
+.lantern_boxs .table_boxs .room_name, .lantern_boxs .table_boxs .room_add, .lantern_boxs .table_boxs .room_phone { display: inline-block; float: left; font-size: 18px; font-weight: 600; padding: 10px 15px; height: 45px; }
+@media screen and (max-width: 799px) and (min-width: 0) { .lantern_boxs .table_boxs .room_name, .lantern_boxs .table_boxs .room_add, .lantern_boxs .table_boxs .room_phone { font-size: 16px; padding: 10px; } }
+.lantern_boxs .table_boxs .room_name { width: 40%; color: white; background-color: #90619b; }
+@media screen and (max-width: 874px) and (min-width: 0) { .lantern_boxs .table_boxs .room_name { width: 100%; } }
+.lantern_boxs .table_boxs .room_name .da { display: inline-block; cursor: pointer; float: right; margin: 0 10px; padding: 3px 10px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background-color: white; color: #522376; text-decoration: none; font-size: 14px; font-weight: 600; }
+.lantern_boxs .table_boxs .room_name .da:hover, .lantern_boxs .table_boxs .room_name .da:active { background-color: rgba(255, 255, 255, 0.9); }
+.lantern_boxs .table_boxs .room_add { width: 40%; color: rgba(42, 42, 42, 0.8); background-color: rgba(255, 255, 255, 0.5); }
+@media screen and (max-width: 874px) and (min-width: 0) { .lantern_boxs .table_boxs .room_add { width: 100%; background-color: rgba(255, 255, 255, 0.7); } }
+.lantern_boxs .table_boxs .room_phone { width: 20%; color: white; background-color: rgba(144, 97, 155, 0.5); }
+@media screen and (max-width: 874px) and (min-width: 0) { .lantern_boxs .table_boxs .room_phone { width: 100%; } }
