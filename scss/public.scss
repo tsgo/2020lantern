@@ -719,6 +719,18 @@ body {
       }
     }
   }
+
+  a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: rgba(184, 132, 62, 1.00);
+    text-decoration: none;
+
+    &:hover {
+      color: rgba(228, 0, 127, 1.00);
+    }
+  }
 } 
 
 .show_boxs {

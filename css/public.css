@@ -135,6 +135,8 @@ body.index_he { height: 100vh; }
 @media screen and (max-width: 1089px) and (min-width: 450px) { .news_box .plan_boxs a { font-size: 1.2rem; } }
 @media screen and (max-width: 449px) and (min-width: 0) { .news_box .plan_boxs a { font-size: 1rem; } }
 .news_box .plan_boxs a:hover, .news_box .plan_boxs a:active, .news_box .plan_boxs a.plan_ok { color: #e00074; font-weight: 600; }
+.news_box a { display: inline-block; margin: 0 10px; font-size: 1.2rem; color: #b8843e; text-decoration: none; }
+.news_box a:hover { color: #e4007f; }
 
 .show_boxs { display: inline-block; width: 95%; margin: 0 auto; padding: 20px 0; }
 .show_boxs .show_box { display: inline-block; width: 100%; padding-bottom: 20px; *zoom: 1; }
