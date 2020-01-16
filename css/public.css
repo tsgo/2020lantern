@@ -315,3 +315,21 @@ p { padding: 0; margin: 0; }
 @media screen and (max-width: 874px) and (min-width: 0) { .lantern_boxs .table_boxs .room_add { width: 100%; background-color: rgba(255, 255, 255, 0.7); } }
 .lantern_boxs .table_boxs .room_phone { width: 20%; color: white; background-color: rgba(144, 97, 155, 0.5); }
 @media screen and (max-width: 874px) and (min-width: 0) { .lantern_boxs .table_boxs .room_phone { width: 100%; } }
+
+.t_boxs { display: inline-block; width: 100%; padding: 10px 20px; color: white; font-size: 1.2rem; }
+.t_boxs.to { background-color: #f79646; }
+
+@media screen and (min-width: 0) and (max-width: 919px) { .table { display: block; width: 100%; }
+  .table .tr { display: block; }
+  .table .tr .td { display: block; border-right: 1px solid #f79646; border-bottom: 1px solid #f79646; border-left: 1px solid #f79646; text-align: left; padding: 10px; color: black; }
+  .table .tr .td.tll { border-left: 1px solid #f79646; }
+  .table .tr .td.tdd { border-bottom: 2px solid #f79646; }
+  .table .tr .td:before { content: attr(title); display: inline-block; width: 120px; font-size: .8rem; color: #f79646; font-weight: 600; } }
+@media screen and (min-width: 920px) { .table { display: table; width: 100%; }
+  .table .tr { display: table-row; *zoom: 1; }
+  .table .tr:after { display: table; content: ""; line-height: 0; clear: both; }
+  .table .tr .td { display: table-cell; border-right: 1px solid #f79646; border-bottom: 1px solid #f79646; font-size: 1rem; color: black; padding: 10px 0; }
+  .table .tr .td.tl { border-left: 1px solid #f79646; }
+  .table .tr:first-child .td { position: relative; }
+  .table .tr:first-child .td:before { content: attr(title); display: inline-block; width: 100%; background-color: #fdeada; font-size: 1rem; color: black; padding: 10px 0; margin-top: -10px; margin-bottom: 10px; }
+  .table .tr:first-child .td.to:before { border-bottom: 1px solid #f79646; } }
