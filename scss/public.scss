@@ -730,6 +730,10 @@ body {
     &:hover {
       color: rgba(228, 0, 127, 1.00);
     }
+
+    @include range-width(0, 500px) {
+      font-size: .9rem;
+    }
   }
 } 
 
@@ -803,6 +807,24 @@ body {
       }
     }
   }
+
+  a {
+    display: inline-block;
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: rgba(192, 143, 71, 1.00);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    @include border-radius(4px);
+    padding: 10px 15px;
+    float: right;
+
+    &:hover {
+      background-color: rgba(228, 0, 127, 1.00);
+    }
+  }
 }
 
 p {
@@ -866,6 +888,12 @@ p {
       line-height: 25px;
     }
 
+    &.s_span {
+      font-size: .9rem;
+      line-height: 1.2rem;
+      color: rgba(90, 90, 90, .8);
+    }
+
     &.tr_o {
       padding: 20px 0 0 0;
     }
@@ -891,6 +919,19 @@ p {
     text-align: left;
     float: left;
     padding-bottom: 15px;
+
+    &.a_btn {
+      padding: 5px 15px;
+      background-color: rgba(192, 143, 71, 1.00);
+      @include border-radius(5px); 
+      color: white;
+      margin-bottom: 15px;
+
+      &:hover {
+        color: white;
+        background-color: rgba(228, 0, 127, 1.00);
+      }
+    }
 
     &:hover {
       color: rgba(228, 0, 127, 1.00);
@@ -1451,7 +1492,8 @@ p {
   }
 
   @include range-width(0, 500px) {
-    font-style: 1rem;
+    font-size: .9rem;
+    padding: 5px 0;
   }
 
   &.be_g {

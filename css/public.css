@@ -137,6 +137,7 @@ body.index_he { height: 100vh; }
 .news_box .plan_boxs a:hover, .news_box .plan_boxs a:active, .news_box .plan_boxs a.plan_ok { color: #e00074; font-weight: 600; }
 .news_box a { display: inline-block; margin: 0 10px; font-size: 1.2rem; color: #b8843e; text-decoration: none; }
 .news_box a:hover { color: #e4007f; }
+@media screen and (max-width: 499px) and (min-width: 0) { .news_box a { font-size: .9rem; } }
 
 .show_boxs { display: inline-block; width: 95%; margin: 0 auto; padding: 20px 0; }
 .show_boxs .show_box { display: inline-block; width: 100%; padding-bottom: 20px; *zoom: 1; }
@@ -150,6 +151,8 @@ body.index_he { height: 100vh; }
 .show_boxs .show_box .sb_r .s_name { display: inline-block; width: 100%; font-size: 1.2rem; color: #b8843e; font-weight: 600; padding-bottom: 10px; }
 .show_boxs .show_box .sb_r .s_name:before { display: inline-block; content: attr(title); font-size: 1.2rem; color: #e4007f; }
 .show_boxs .show_box .sb_r .s_type { display: inline-block; width: 100%; font-size: 1rem; line-height: 1.6rem; }
+.show_boxs a { display: inline-block; text-align: left; font-size: 1rem; margin-bottom: 15px; background-color: #c08f47; color: white; font-weight: 600; text-decoration: none; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; padding: 10px 15px; float: right; }
+.show_boxs a:hover { background-color: #e4007f; }
 
 p { padding: 0; margin: 0; }
 
@@ -166,10 +169,13 @@ p { padding: 0; margin: 0; }
 .program_boxs:after { display: table; content: ""; line-height: 0; clear: both; }
 .program_boxs span { display: inline-block; width: 100%; font-size: 1.2rem; line-height: 1.9rem; text-align: left; }
 @media screen and (max-width: 754px) and (min-width: 0) { .program_boxs span { font-size: 16px; line-height: 25px; } }
+.program_boxs span.s_span { font-size: .9rem; line-height: 1.2rem; color: rgba(90, 90, 90, 0.8); }
 .program_boxs span.tr_o { padding: 20px 0 0 0; }
 .program_boxs span.tr_list { padding: 0 0 20px 30px; }
 .program_boxs span i { display: inline-block; font-style: normal; color: #be171c; font-weight: 600; }
 .program_boxs a { display: inline-block; font-size: 1rem; cursor: pointer; text-decoration: none; color: #5a5a5a; text-align: left; float: left; padding-bottom: 15px; }
+.program_boxs a.a_btn { padding: 5px 15px; background-color: #c08f47; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; color: white; margin-bottom: 15px; }
+.program_boxs a.a_btn:hover { color: white; background-color: #e4007f; }
 .program_boxs a:hover { color: #e4007f; }
 .program_boxs .program_box { display: inline-block; width: 100%; *zoom: 1; margin-bottom: 20px; }
 .program_boxs .program_box:after { display: table; content: ""; line-height: 0; clear: both; }
@@ -268,7 +274,7 @@ p { padding: 0; margin: 0; }
 
 .add_type { font-size: 1.2rem; color: #5a5a5a; text-align: left; }
 .add_type.add_right { text-align: right !important; }
-@media screen and (max-width: 499px) and (min-width: 0) { .add_type { font-style: 1rem; } }
+@media screen and (max-width: 499px) and (min-width: 0) { .add_type { font-size: .9rem; padding: 5px 0; } }
 .add_type.be_g:before { display: inline-block; content: attr(title); font-weight: 600; color: #b8843e; }
 .add_type:before { display: inline-block; content: attr(title); font-weight: 600; color: #e4007f; }
 .add_type.add_2 { display: inline-block; width: 50%; float: left; }
