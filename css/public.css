@@ -68,6 +68,8 @@ body.index_he { height: 100vh; }
 .i_cent_boxs { display: inline-block; width: 100%; padding: 20px 20px 0 20px; margin-top: -60px; }
 @media screen and (max-width: 767px) and (min-width: 450px) { .i_cent_boxs { margin-top: -40px; } }
 @media screen and (max-width: 449px) and (min-width: 0) { .i_cent_boxs { margin-top: auto; } }
+.i_cent_boxs .note { width: 100%; max-width: 1200px; margin-bottom: 80px; }
+@media screen and (max-width: 449px) and (min-width: 0) { .i_cent_boxs .note { display: inline-block; width: 100%; max-width: 450px; } }
 .i_cent_boxs .in_mouse { width: 100%; max-width: 1200px; }
 @media screen and (max-width: 449px) and (min-width: 0) { .i_cent_boxs .in_mouse { display: none; } }
 .i_cent_boxs .in_mouse_m { display: none; }

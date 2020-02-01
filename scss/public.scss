@@ -377,6 +377,18 @@ body {
     margin-top: auto;
   }  
 
+  .note {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 80px;
+
+    @include range-width(0, 450px) {
+      display: inline-block;
+      width: 100%;
+      max-width: 450px;
+    }
+  }
+
   .in_mouse {
     width: 100%;
     max-width: 1200px;
