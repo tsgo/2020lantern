@@ -788,6 +788,10 @@ body {
       padding-left: 20px;
       text-align: left;
 
+      &.sb_all {
+        width: 100%;
+      }
+
       @include range-width(0, 630px) {
         width: 100%;
         padding-left: 0;

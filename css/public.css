@@ -149,6 +149,7 @@ body.index_he { height: 100vh; }
 @media screen and (max-width: 629px) and (min-width: 0) { .show_boxs .show_box .sb_l img { max-width: 100%; } }
 @media screen and (max-width: 629px) and (min-width: 0) { .show_boxs .show_box .sb_l { width: 100%; } }
 .show_boxs .show_box .sb_r { display: inline-block; width: 70%; float: left; padding-left: 20px; text-align: left; }
+.show_boxs .show_box .sb_r.sb_all { width: 100%; }
 @media screen and (max-width: 629px) and (min-width: 0) { .show_boxs .show_box .sb_r { width: 100%; padding-left: 0; padding-top: 15px; padding-bottom: 15px; } }
 .show_boxs .show_box .sb_r .s_name { display: inline-block; width: 100%; font-size: 1.2rem; color: #b8843e; font-weight: 600; padding-bottom: 10px; }
 .show_boxs .show_box .sb_r .s_name:before { display: inline-block; content: attr(title); font-size: 1.2rem; color: #e4007f; }
